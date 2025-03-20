@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { SlArrowDown } from "react-icons/sl";
 import { IoMdSettings } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
@@ -9,14 +10,51 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx"; // Added close icon
+import ShopPlus from "./ShopPlus";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [shopLinksVisible, setShopLinksVisible] = useState(false); // Fixed typo
   const [blogshow, setblogshow] = useState(false);
+  const [plusShop, setplusShop] = useState(false);
+
+  // shops 1 links States
+  const [Shop1State, setShop1State] = useState(false);
+  // shop  links 2 state
+  const [Shop3State, setShop3State] = useState(false);
+  // shop  links 3 state
+  const [Shop4State, setShop4State] = useState(false);
+  // shop  links 4 state
+  const [Shop5State, setShop5State] = useState(false);
+
+  // Blog link state
+  const [blogplus, setblogplus] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu);
+  };
+  const ShopToggle = () => {
+    setplusShop(!plusShop);
+  };
+  const ShopTogglle = () => {
+    setShop1State(!Shop1State);
+  };
+  const Togle3 = () => {
+    setShop3State(!Shop3State);
+  };
+  const Togle4 = () => {
+    setShop4State(!Shop4State);
+  };
+  const Togle5 = () => {
+    setShop5State(!Shop5State);
+  };
+  const Togle6 = () => {
+    setShop5State(!Shop5State);
+  };
+  // Blog LInk funciton
+
+  const BlogToggle = () => {
+    setblogplus(!blogplus);
   };
 
   const shopLinks = [
@@ -26,14 +64,19 @@ const Navbar = () => {
     },
     {
       title: "Product Details Page",
-      links: ["Product Single", "Product Variable", "Product Detail", "Product Detail"],
+      links: [
+        "Product Single",
+        "Product Variable",
+        "Product Detail",
+        "Product Detail",
+      ],
     },
     {
       title: "Single Product Page",
       links: ["Single Product", "Shop3 Detail", "Shop3 Detail", "Shop3 Detail"],
     },
     {
-      title: "Other Pages",
+      title: "Otdivher Pages",
       links: ["Shop3 Detail", "Shop3 Detail", "Shop3 Detail", "Shop3 Detail"],
     },
   ];
@@ -44,43 +87,60 @@ const Navbar = () => {
       <div className="w-full flex justify-center items-center shadow-xl">
         <div className="w-[80vw] mx-auto flex py-6 justify-between items-center">
           {/* Logo */}
-          <h1 className="md:text-4xl text-2xl font-bold text-gray-800">Celex</h1>
+          <h1 className="md:text-4xl text-2xl font-bold text-gray-800">
+            Celex
+          </h1>
 
           {/* Navigation */}
           <ul className="hidden lg:flex text-lg space-x-8 font-bold p-3">
             <li className="h-10 transition-all duration-300">
-              <a href="#" className="flex items-center hover:text-amber-800 gap-1 text-gray-700">
+              <Link
+                to="#"
+                className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
+              >
                 Home <SlArrowDown />
-              </a>
+              </Link>
+            </li>
+            <li className="h-10 transition-all duration-300">
+              <Link
+                to="#"
+                className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
+              >
+                About Us <SlArrowDown />
+              </Link>
             </li>
             <li
               className="h-10 transition-all duration-300"
               onMouseEnter={() => setShopLinksVisible(true)}
               onMouseLeave={() => setShopLinksVisible(false)}
             >
-              <a href="#" className="flex items-center hover:text-amber-800 gap-1 text-gray-700">
+              <Link
+                to="#"
+                className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
+              >
                 Shop <SlArrowDown />
-              </a>
+              </Link>
             </li>
             <li
               className="h-10 transition-all duration-300"
               onMouseEnter={() => setblogshow(true)}
               onMouseLeave={() => setblogshow(false)}
             >
-              <a href="#" className="flex items-center hover:text-amber-800 gap-1 text-gray-700">
+              <Link
+                to="#"
+                className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
+              >
                 Blog <SlArrowDown />
-              </a>
+              </Link>
             </li>
 
             <li className="h-10 transition-all duration-300">
-              <a href="#" className="flex items-center hover:text-amber-800 gap-1 text-gray-700">
-                About Us <SlArrowDown />
-              </a>
-            </li>
-            <li className="h-10 transition-all duration-300">
-              <a href="#" className="flex items-center hover:text-amber-800 gap-1 text-gray-700">
+              <Link
+                to="#"
+                className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
+              >
                 Contact <SlArrowDown />
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -90,31 +150,286 @@ const Navbar = () => {
             <FaHeart className="cursor-pointer hover:text-yellow-300" />
             <BsFillBasketFill className="cursor-pointer hover:text-yellow-300" />
             {/* Menu Toggle Button */}
-            <IoIosMenu className="text-3xl lg:hidden cursor-pointer hover:text-gray-700" onClick={toggleMenu} />
+            <IoIosMenu
+              className="text-3xl lg:hidden cursor-pointer hover:text-gray-700"
+              onClick={toggleMenu}
+            />
           </div>
         </div>
       </div>
 
       {/* Mobile Menu (Slide-in effect) */}
       {menu && (
-        <div className="fixed z-1 top-0 left-0 w-[80vw] md:w-[60vw] lg:hidden h-screen bg-amber-200 shadow-lg transition-transform transform translate-x-0 p-4">
+        <div className=" z-1 left-0 w-[80vw] md:w-[60vw] lg:hidden min-h-screen  bg-gray-200 shadow-lg transition-transform transform translate-x-0 p-4 overflow-auto">
           {/* Close Button */}
           <div className="flex justify-end">
-            <RxCross1 className="text-3xl cursor-pointer" onClick={toggleMenu} />
+            <RxCross1
+              className="text-3xl cursor-pointer"
+              onClick={toggleMenu}
+            />
           </div>
 
           {/* Menu List */}
-          <ul className="flex flex-col justify-center text-xl gap-6 mt-6">
-            {["Home", "Shop", "Blogs", "About Us", "Contact"].map((item, index) => (
-              <React.Fragment key={index}>
-                <li className="flex justify-between items-center hover:text-white transition duration-300">
-                  <a href="#" className="text-gray-900">{item}</a>
+          <ul className="flex flex-col justify-center text-xl gap-2 mt-6">
+            <li className="flex justify-between items-center p-1 border-b border-gray-400 hover:text-white transition duration-300">
+              <Link to="#" className="text-gray-900">
+                Home
+              </Link>
+            </li>
+
+            <li className="flex justify-between items-center p-1 border-b border-gray-400 hover:text-white transition duration-300">
+              <Link to="#" className="text-gray-900">
+                About Us
+              </Link>
+            </li>
+
+            <li
+              onClick={() => ShopToggle()}
+              className="flex justify-between  items-center p-1 border-b border-gray-400 hover:text-yellow font-bold transition duration-300"
+            >
+              <Link to="#" className="">
+                Shop
+              </Link>
+              <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+            </li>
+            {plusShop && (
+              <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                <li
+                  onClick={() => ShopTogglle()}
+                  className="flex justify-between hover:bg-amber-400  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Shop Page</Link>
                   <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
                 </li>
-                <hr />
-              </React.Fragment>
-            ))}
+                {/* Shop Pages LInk  */}
+                {Shop1State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle3()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to=""> Product Details Page</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop3State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle4()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Single Product Page</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop4State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle5()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Other Pages</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop5State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+              </ul>
+            )}
+
+            {/* Blog LINK  */}
+            <li
+              onClick={() => BlogToggle()}
+              className="flex justify-between  items-center p-1 border-b border-gray-400 hover:text-yellow font-bold transition duration-300"
+            >
+              <Link to="#" className="">
+                Blog
+              </Link>
+              <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+            </li>
+            {blogplus && (
+              <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                <li
+                  onClick={() => ShopTogglle()}
+                  className="flex justify-between hover:bg-amber-400  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Blog Page</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {/* Shop Pages LInk  */}
+                {Shop1State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle3()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to=""> Blog Details Page</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop3State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle4()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Blog Product Page</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop4State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+                {/* shops state 4  */}
+                <li
+                  onClick={() => Togle5()}
+                  className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300"
+                >
+                  <Link to="">Blog Other Pages</Link>
+                  <BsPlusSquare className="text-xl hover:rotate-90 transition-transform duration-300" />
+                </li>
+                {Shop5State && (
+                  <ul className="flex  flex-col gap-1 w-[98%]  ml-3 ">
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">page1</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page2</Link>
+                    </li>
+                    <li className="flex justify-between  items-center p-1 border-b border-gray-300 hover:text-yellow  transition duration-300">
+                      <Link to="">Page3</Link>
+                    </li>
+                  </ul>
+                )}
+              </ul>
+            )}
+
+            <li className="flex justify-between items-center p-1 border-b border-gray-400 hover:text-white transition duration-300">
+              <Link to="#" className="text-gray-900">
+                Contact Us
+              </Link>
+            </li>
           </ul>
+          {/* Social Icons */}
+          <div className="absolute  bottom-2 flex justify-center items-center w-[90%] ">
+            <ul className="flex justify-around text-xl gap-5 text-white">
+              <li className="hover:scale-110 transition-transform duration-300">
+                <Link
+                  to="#"
+                  className="w-8 h-8 flex justify-center items-center rounded-full bg-blue-600 text-white text-2xl shadow-lg hover:shadow-xl"
+                >
+                  <ImFacebook />
+                </Link>
+              </li>
+
+              <li className="hover:scale-110 transition-transform duration-300">
+                <Link
+                  to="#"
+                  className="w-8 h-8 flex justify-center items-center rounded-full bg-gray-900 text-white text-2xl shadow-lg hover:shadow-xl"
+                >
+                  <FaXTwitter />
+                </Link>
+              </li>
+
+              <li className="hover:scale-110 transition-transform duration-300">
+                <Link
+                  to="#"
+                  className="w-8 h-8 flex justify-center items-center rounded-full bg-green-500 text-white text-2xl shadow-lg hover:shadow-xl"
+                >
+                  <FaWhatsapp />
+                </Link>
+              </li>
+
+              <li className="hover:scale-110 transition-transform duration-300">
+                <Link
+                  to="#"
+                  className="w-8 h-8 flex justify-center items-center rounded-full bg-red-600 text-white text-2xl shadow-lg hover:shadow-xl"
+                >
+                  <AiOutlineYoutube />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
 
@@ -131,7 +446,9 @@ const Navbar = () => {
               <ul className="flex flex-col gap-3">
                 {category.links.map((link, idx) => (
                   <li key={idx}>
-                    <a className="hover:text-blue-600" href="#">{link}</a>
+                    <Link className="hover:text-[#F0B100]" to="#">
+                      {link}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -143,16 +460,26 @@ const Navbar = () => {
       {/* Blog Links Dropdown */}
       {blogshow && (
         <div
-          className="w-[15vw] absolute z-1 top-[4.5rem] left-[35rem] h-[10vh] bg-white"
+          className="w-[15vw] absolute z-1 top-[4.5rem] left-[45rem] h-[10vh] bg-white"
           onMouseEnter={() => setblogshow(true)}
           onMouseLeave={() => setblogshow(false)}
         >
           <ul className="p-2">
-            <li className="hover:text-blue-600"><a href="#">Blog1</a></li>
-            <li className="hover:text-blue-600"><a href="#">Blog2</a></li>
+            <li>
+              <Link to="#" className="hover:text-[#F0B100]">
+                Blog1
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="hover:text-[#F0B100]">
+                Blog2
+              </Link>
+            </li>
           </ul>
         </div>
       )}
+
+      {/* {plusShop && <ShopPlus/> } */}
     </>
   );
 };
