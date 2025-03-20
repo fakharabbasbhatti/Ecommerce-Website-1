@@ -95,7 +95,7 @@ const Navbar = () => {
           <ul className="hidden lg:flex text-lg space-x-8 font-bold p-3">
             <li className="h-10 transition-all duration-300">
               <Link
-                to="#"
+                to="/"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
                 Home <SlArrowDown />
@@ -103,7 +103,7 @@ const Navbar = () => {
             </li>
             <li className="h-10 transition-all duration-300">
               <Link
-                to="#"
+                to="/about"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
                 About Us <SlArrowDown />
@@ -115,7 +115,7 @@ const Navbar = () => {
               onMouseLeave={() => setShopLinksVisible(false)}
             >
               <Link
-                to="#"
+                to="/shop"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
                 Shop <SlArrowDown />
@@ -127,7 +127,7 @@ const Navbar = () => {
               onMouseLeave={() => setblogshow(false)}
             >
               <Link
-                to="#"
+                to="/blog"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
                 Blog <SlArrowDown />
@@ -136,7 +136,7 @@ const Navbar = () => {
 
             <li className="h-10 transition-all duration-300">
               <Link
-                to="#"
+                to="/contact"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
                 Contact <SlArrowDown />
