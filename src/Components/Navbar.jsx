@@ -97,7 +97,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Slide-in effect) */}
       {menu && (
-        <div className="fixed top-0 left-0 w-[80vw] md:w-[60vw] lg:hidden h-screen bg-amber-200 shadow-lg transition-transform transform translate-x-0 p-4">
+        <div className="fixed z-1 top-0 left-0 w-[80vw] md:w-[60vw] lg:hidden h-screen bg-amber-200 shadow-lg transition-transform transform translate-x-0 p-4">
           {/* Close Button */}
           <div className="flex justify-end">
             <RxCross1 className="text-3xl cursor-pointer" onClick={toggleMenu} />
@@ -121,7 +121,7 @@ const Navbar = () => {
       {/* Shop Links Dropdown */}
       {shopLinksVisible && (
         <div
-          className="w-[80vw] absolute top-[4.5rem] left-[20px] h-[40vh] bg-gray-200 flex justify-around pt-3"
+          className="w-[80vw] absolute z-1 top-[4.5rem] left-[20px] h-[40vh] bg-white flex justify-around pt-3"
           onMouseEnter={() => setShopLinksVisible(true)}
           onMouseLeave={() => setShopLinksVisible(false)}
         >
@@ -143,13 +143,13 @@ const Navbar = () => {
       {/* Blog Links Dropdown */}
       {blogshow && (
         <div
-          className="w-[15vw] absolute top-[4.5rem] left-[35rem] h-[10vh] bg-gray-200"
+          className="w-[15vw] absolute z-1 top-[4.5rem] left-[35rem] h-[10vh] bg-white"
           onMouseEnter={() => setblogshow(true)}
           onMouseLeave={() => setblogshow(false)}
         >
           <ul className="p-2">
-            <li><a href="#">Blog1</a></li>
-            <li><a href="#">Blog2</a></li>
+            <li className="hover:text-blue-600"><a href="#">Blog1</a></li>
+            <li className="hover:text-blue-600"><a href="#">Blog2</a></li>
           </ul>
         </div>
       )}
