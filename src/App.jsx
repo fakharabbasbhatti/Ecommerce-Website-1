@@ -8,7 +8,8 @@ import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar"; // Ensure Navbar is imported
 import Footer from "./Components/Footer"; // Ensure Footer is imported
-import Cart from "./Components/Home/ShopOtherPage/Cart";
+import Cart from "./Components/ShopOtherPages/Cart";
+
 
 
 

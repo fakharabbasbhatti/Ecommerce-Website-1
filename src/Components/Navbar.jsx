@@ -98,12 +98,12 @@ const Navbar = () => {
 
           {/* Navigation */}
           <ul className="hidden lg:flex text-lg space-x-8 font-bold p-3">
-            <li className="h-10 transition-all duration-300">
+            <li className="h-10 transition-all duration-300 ">
               <Link
                 to="/"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
-                Home <SlArrowDown />
+                Home <SlArrowDown className="text-xs" />
               </Link>
             </li>
             <li className="h-10 transition-all duration-300">
@@ -111,7 +111,7 @@ const Navbar = () => {
                 to="/about"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
-                About Us <SlArrowDown />
+                About Us <SlArrowDown className="text-xs" />
               </Link>
             </li>
             <li
@@ -123,7 +123,7 @@ const Navbar = () => {
                 to="/shop"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
-                Shop <SlArrowDown />
+                Shop <SlArrowDown className="text-xs" />
               </Link>
             </li>
             <li
@@ -135,7 +135,7 @@ const Navbar = () => {
                 to="/blog"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
-                Blog <SlArrowDown />
+                Blog <SlArrowDown className="text-xs" />
               </Link>
             </li>
 
@@ -144,7 +144,7 @@ const Navbar = () => {
                 to="/contact"
                 className="flex items-center hover:text-[#F0B100] gap-1 text-gray-700"
               >
-                Contact <SlArrowDown />
+                Contact <SlArrowDown className="text-xs" />
               </Link>
             </li>
           </ul>
