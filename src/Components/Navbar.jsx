@@ -63,7 +63,7 @@ const Navbar = () => {
       links: ["Shop3 Detail", "Shop3 Detail", "Shop3 Detail", "Shop3 Detail"],
     },
     {
-      title: "Product Details Page",
+      title: "Shop Details Page",
       links: [
         "Product Single",
         "Product Variable",
@@ -72,12 +72,17 @@ const Navbar = () => {
       ],
     },
     {
-      title: "Single Product Page",
+      title: "Shop Single Product",
       links: ["Single Product", "Shop3 Detail", "Shop3 Detail", "Shop3 Detail"],
     },
     {
-      title: "Otdivher Pages",
-      links: ["Shop3 Detail", "Shop3 Detail", "Shop3 Detail", "Shop3 Detail"],
+      title: "Other Pages",
+      links: [
+        "Cart Page",
+        "Checkout Page",
+        "Whishlist Page",
+        "Empty Card Page",
+      ],
     },
   ];
 
@@ -436,41 +441,127 @@ const Navbar = () => {
       {/* Shop Links Dropdown */}
       {shopLinksVisible && (
         <div
-          className="w-[80vw] absolute z-1 top-[4.5rem] left-[20px] h-[40vh] bg-white flex justify-around pt-3"
+          className="w-[80vw] absolute z-1 top-[4.5rem] left-[20px] h-[40vh] bg-gradient-to-r from-gray-200 to-gray-100 rounded-xl flex justify-around pt-3"
           onMouseEnter={() => setShopLinksVisible(true)}
           onMouseLeave={() => setShopLinksVisible(false)}
         >
-          {shopLinks.map((category, index) => (
-            <div key={index} className="flex flex-col gap-3">
-              <h1 className="text-xl font-semibold">{category.title}</h1>
-              <ul className="flex flex-col gap-3">
-                {category.links.map((link, idx) => (
-                  <li key={idx}>
-                    <Link className="hover:text-[#F0B100]" to="#">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-col gap-3">
+            <h1 className="text-xl font-semibold">Shop Page</h1>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1 className="text-xl font-semibold"> Prodcut Detail Page</h1>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1 className="text-xl font-semibold">Single Product Page</h1>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Shop1 Detail
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h1 className="text-xl font-semibold">Other Pages</h1>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link className="hover:text-[#F0B100]" to="/cart">
+                  Cart Page
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Checkout Page
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Wishlist Page
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-[#F0B100]" to="">
+                  Empty Cart Page
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
 
       {/* Blog Links Dropdown */}
       {blogshow && (
         <div
-          className="w-[15vw] absolute z-1 top-[4.5rem] left-[45rem] h-[10vh] bg-white"
+          className="w-[20vw] absolute z-1 top-[4.5rem] left-[45rem] h-[20vh] rounded-xl bg-gradient-to-r  from-gray-200 to-gray-100 "
           onMouseEnter={() => setblogshow(true)}
           onMouseLeave={() => setblogshow(false)}
         >
-          <ul className="p-2">
-            <li>
-              <Link to="#" className="hover:text-[#F0B100]">
+          <ul className="p-2 flex flex-col justify-center gap-5 font-semibold">
+            <li className="border-b border-gray-100 hover:border-gray-300 p-1">
+              <Link to="#" className="hover:text-[#F0B100] ">
                 Blog1
               </Link>
             </li>
-            <li>
+            <li className="border-b border-gray-100 hover:border-gray-300 p-1">
               <Link to="#" className="hover:text-[#F0B100]">
                 Blog2
               </Link>

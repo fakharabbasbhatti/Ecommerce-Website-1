@@ -8,6 +8,7 @@ import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar"; // Ensure Navbar is imported
 import Footer from "./Components/Footer"; // Ensure Footer is imported
+import Cart from "./Components/Home/ShopOtherPage/Cart";
 
 
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([{
     {path:"/shop" ,element:<Shop/>},
     {path:"/blog" ,element:<Blog/>},
     {path:"/contact" ,element:<Contact/>},
+    {path:"/cart", element:<Cart/>}
   ]
 }])
 
@@ -36,5 +38,11 @@ const router = createBrowserRouter([{
 function App(){
   return <RouterProvider router={router}/>;
 }
+
+
+
+
+
+
 
 export default App;
