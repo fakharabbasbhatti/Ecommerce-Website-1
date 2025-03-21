@@ -18,7 +18,7 @@ const Footer = () => {
                 placeholder="Your Email Address"
                 className="w-full p-3 border bg-white border-gray-300 rounded-full focus:outline-none pr-28"
               />
-              <button className="absolute right-1 top-1 bottom-1 bg-yellow-500 text-white px-4 sm:px-5 rounded-full text-sm font-semibold">
+              <button className="absolute right-1 top-1 bottom-1 bg-yellow-500 hover:bg-yellow-300 text-white px-4 sm:px-5 rounded-full text-sm font-semibold">
                 SUBSCRIBE
               </button>
             </div>

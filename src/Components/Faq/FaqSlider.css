@@ -1,0 +1,15 @@
+@keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    gap: 10px;
+    animation: marquee 15s linear infinite; 
+  }
+  
