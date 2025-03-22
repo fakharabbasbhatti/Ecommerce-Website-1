@@ -557,12 +557,12 @@ const Navbar = () => {
         >
           <ul className="p-2 flex flex-col justify-center gap-5 font-semibold">
             <li className="border-b border-gray-100 hover:border-gray-300 p-1">
-              <Link to="#" className="hover:text-[#F0B100] ">
+              <Link to="/bloggrid" className="hover:text-[#F0B100] ">
                 Blog1
               </Link>
             </li>
             <li className="border-b border-gray-100 hover:border-gray-300 p-1">
-              <Link to="#" className="hover:text-[#F0B100]">
+              <Link to="/bloglist" className="hover:text-[#F0B100]">
                 Blog2
               </Link>
             </li>

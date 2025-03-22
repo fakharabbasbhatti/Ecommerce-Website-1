@@ -7,6 +7,13 @@ import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
 import Navbar from './Components/Navbar'; // Ensure Navbar is imported
 import Footer from './Components/Footer'; // Ensure Footer is imported
+import BlogGrid from "./Pages/BlogGrid";
+import BlogLists from "./Pages/BlogLists";
+import SingleBlog from "./Pages/SingleBlog";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import NotPage from "./Pages/NotPage";
+import FaqPage from "./Pages/FaqPage";
+import ComeSoon from "./Pages/ComeSoon";
 
 const Mainlayout = () =>{
   return(
@@ -20,12 +27,19 @@ const Mainlayout = () =>{
 
 const router = createBrowserRouter([
   {
-    element: <MainLayout />,
+    element: <Mainlayout />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
+      { path: "/privacypolicy", element: <PrivacyPolicy /> },
+      { path: "/notpage", element: <NotPage /> },
+      { path: "/faqpage", element: <FaqPage /> },
+      { path: "/comesoon", element: <ComeSoon /> },
       { path: "/blog", element: <Blog /> },
-      { path: "/contact", element: <Contact /> }
+      { path: "/contact", element: <Contact /> },
+      { path: "/bloggrid", element: <BlogGrid /> },
+      { path: "/bloglist", element: <BlogLists /> },
+      { path: "/singleblog", element: <SingleBlog /> },
     ]
   }
 ]);

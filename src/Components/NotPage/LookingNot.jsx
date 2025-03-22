@@ -11,7 +11,7 @@ const NotFoundPage = () => {
       </div>
 
       {/* Card */}
-      <div className="bg-white shadow-lg rounded-lg p-10 w-full max-w-2xl  text-center">
+      <div className="bg-gray-50 shadow-lg rounded-lg p-10 w-full max-w-2xl text-center mt-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Sorry For The Inconvenience.
         </h2>

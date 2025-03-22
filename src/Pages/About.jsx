@@ -9,7 +9,12 @@ import AboutSlider from '../Components/About/AboutSlider';
 const About = () => {
   return (
     <div>
-        <Hero/>
+        <AboutHero />
+        <WelCelex />
+        <AboutProgress />
+        <AboutCard />
+        <AboutTeam />
+        <AboutSlider />
     </div>
   )
 }
