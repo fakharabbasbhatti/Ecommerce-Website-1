@@ -14,6 +14,8 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import NotPage from "./Pages/NotPage";
 import FaqPage from "./Pages/FaqPage";
 import ComeSoon from "./Pages/ComeSoon";
+import ShopColumn from "./Pages/ShopColumn";
+import ShopColumnSecond from "./Pages/ShopColumnSecond";
 
 const Mainlayout = () =>{
   return(
@@ -40,6 +42,8 @@ const router = createBrowserRouter([
       { path: "/bloggrid", element: <BlogGrid /> },
       { path: "/bloglist", element: <BlogLists /> },
       { path: "/singleblog", element: <SingleBlog /> },
+      { path: "/shopcolumn", element: <ShopColumn /> },
+      { path: "/shopcolumnsecond", element: <ShopColumnSecond /> }
     ]
   }
 ]);

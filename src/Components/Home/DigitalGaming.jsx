@@ -8,8 +8,8 @@ const DigitalGaming = () => {
                 <img
                     src="/Home/gaming.jpg"
                     alt="Gaming Controller"
-                    className=" shadow-lg lg:h-[80vh]  "
-                    i
+                    className=" shadow-lg lg:h-[80vh]"
+                
                 />
             </div>
 
