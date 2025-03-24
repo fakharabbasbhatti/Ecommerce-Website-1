@@ -10,19 +10,19 @@ const AboutSlider = () => {
   ];
 
   return (
-    <div className="bg-white py-10">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-16 md:gap-20 lg:gap-24 xl:gap-32">
-          {logos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="h-8 sm:h-16 object-contain"
-            />
-          ))}
-        </div>
+    <div className="py-6">
+      <div className="max-w-6xl mx-auto overflow-hidden py-6">
+      <div className="whitespace-nowrap flex items-center animate-marquee-alternate mt-4">
+        {logos.concat(logos).map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt={`Logo ${index + 1}`}
+            className="h-8 sm:h-16 mx-6 object-contain"
+          />
+        ))}
       </div>
+    </div>
     </div>
   );
 };

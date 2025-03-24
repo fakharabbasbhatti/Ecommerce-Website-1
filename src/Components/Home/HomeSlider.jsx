@@ -1,7 +1,7 @@
 import React from "react";
-import "./NotSlider.css";
+import "./HomeSlider.css";
 
-const NotSlider = () => {
+const HomeSlider = () => {
   const logos = [
     "/about/s1.jpeg",
     "/about/s2.jpeg",
@@ -29,4 +29,6 @@ const NotSlider = () => {
   );
 };
 
-export default NotSlider;
+export default HomeSlider;
+
+

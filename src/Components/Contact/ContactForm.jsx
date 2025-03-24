@@ -97,7 +97,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full sm:w-1/2 md:w-1/4 bg-yellow-500 text-white font-semibold py-3 rounded-lg hover:bg-yellow-600 transition duration-300"
+              className="w-full sm:w-1/2 md:w-1/4 bg-yellow-500 text-white font-semibold py-3 hover:bg-yellow-600 transition duration-300"
             >
               SEND
             </button>

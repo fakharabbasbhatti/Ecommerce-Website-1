@@ -3,22 +3,22 @@ import React, { useState } from "react";
 const comments = [
   {
     id: 1,
-    name: "White Lewis",
-    date: "February 19, 2025 at 1:34 am",
+    name: "Olivia",
+    date: "January 10, 2025 at 1:30 am",
     text: "Vestibulum ante ipsum primis aucibus orci luctus et ultrices posuere cubilia Curae Suspendisse varius ut mauris. Mauris ultricies auctor vehicula. Phasellus quam nisi, congue id nulla.",
     avatar: "/blog/te1.jpg",
   },
   {
     id: 2,
-    name: "White Lewis",
-    date: "February 19, 2025 at 1:34 am",
+    name: "Isabella",
+    date: "February 15, 2025 at 2:30 pm",
     text: "Vestibulum ante ipsum primis aucibus orci luctus et ultrices posuere cubilia Curae Suspendisse varius ut mauris. Mauris ultricies auctor vehicula. Phasellus quam nisi, congue id nulla.",
     avatar: "/blog/tes3.jpg",
   },
   {
     id: 3,
-    name: "White Lewis",
-    date: "February 19, 2025 at 1:34 am",
+    name: "Sophia",
+    date: "March 23, 2025 at 12:00 am",
     text: "Vestibulum ante ipsum primis aucibus orci luctus et ultrices posuere cubilia Curae Suspendisse varius ut mauris. Mauris ultricies auctor vehicula. Phasellus quam nisi, congue id nulla.",
     avatar: "/blog/te4.jpg",
   },

@@ -68,11 +68,14 @@ export default function BlogPage() {
                 <div className="relative">
                     <input
                         type="text"
-                        placeholder="Search..."
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none pr-10"
+                        placeholder="Items Search..."
+                        className="w-full px-4 py-2 border rounded-md focus:outline-none pr-14"
                     />
-                    <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black p-2 rounded-r">
+                        <FaSearch className="text-white w-8 h-6" />
+                    </div>
                 </div>
+
                 {/* Categories */}
                 <div>
                     <h3 className="font-bold text-lg mb-2">Categories</h3>
@@ -147,11 +150,11 @@ export default function BlogPage() {
                     {/* Blog Posts */}
                     {posts.map((post) => (
                         <div key={post.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-                            <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                            <img src={post.image} alt={post.title} className="w-full h-62 object-cover" />
                             <div className="p-4">
                                 <h2 className="text-xl font-bold hover:text-yellow-500">{post.title}</h2>
                                 <p className="mt-2 text-gray-600">{post.description}</p>
-                                <button className="mt-4 bg-black text-white px-4 py-2 rounded">Read More</button>
+                                <button className="mt-4 bg-black text-white px-4 py-2 hover:bg-gray-700">Read More</button>
                             </div>
                         </div>
                     ))}
@@ -159,7 +162,7 @@ export default function BlogPage() {
                     {/* YouTube Videos */}
                     {youtubeVideos.map((video) => (
                         <div key={video.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-                            <div className="w-full h-48">
+                            <div className="w-full h-62">
                                 <iframe
                                     className="w-full h-full"
                                     src={video.videoUrl}

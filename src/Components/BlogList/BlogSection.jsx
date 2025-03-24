@@ -80,10 +80,12 @@ export default function BlogSection() {
         <div className="relative">
           <input
             type="text"
-            placeholder="Search..."
-            className="w-full px-4 py-2 border rounded-md focus:outline-none pr-10"
+            placeholder="Items Search..."
+            className="w-full px-4 py-2 border rounded-md focus:outline-none pr-14"
           />
-          <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black p-2 rounded-r">
+            <FaSearch className="text-white w-8 h-6" />
+          </div>
         </div>
         {/* Categories */}
         <div>
@@ -158,7 +160,7 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 gap-6">
           {/* Blog Posts */}
           {posts.map((post) => (
-            <div key={post.id} className="bg-white overflow-hidden flex flex-col md:flex-row">
+            <div key={post.id} className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col md:flex-row">
               {/* Left Side - Image */}
               <img src={post.image} alt={post.title} className="w-full md:w-1/3 h-48 object-cover" />
 
